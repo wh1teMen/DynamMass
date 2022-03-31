@@ -84,7 +84,7 @@ int main() {
 	cin >> size1;
 	int* z1 = new int[size1];
 	fillArr(z1, size1, 10, 31);
-	cout << "Изначальный массив: \n";
+	cout << "Изначальный массив: \n";//
 	showArr(z1, size1);
 	z1 = addEl(z1, size1, 2);
 	cout << "Итоговый массив\n";
