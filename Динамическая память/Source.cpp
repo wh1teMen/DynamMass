@@ -68,7 +68,7 @@ int main() {
 	//const int L = 5;
 	//int arr[L];
 	//ƒинамический массив
-	/*cout << "¬ведите длину массива: ";
+	/*cout << "¬ведите длину массива: ";///
 	cin >> n;
 	int* dArr = new int[n];
 	for (int i = 0; i < n; i++)	{
