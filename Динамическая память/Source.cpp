@@ -37,6 +37,22 @@ template <typename T> T*addEl(T arr[],unsigned int &length,  int n) { //* возвра
 
 }
 
+//Задача 2. Уменеьшение размера массива
+template <typename T> T* delEl(T arr[], unsigned int& length, int n) {
+	if (n <= 0)
+		return arr;
+	length -= n;
+	T* tmp = new T[length];
+		for (int i = 0; i <length; i++) 
+			tmp[i] = arr[i];
+	delete[]arr;
+	arr = new T[length];
+	for (int i = 0; i < length; i++)
+		arr[i] = tmp[i];
+	delete[]tmp;
+	return arr;
+}
+
 int main() {
 	setlocale(LC_ALL, "ru");
 	
@@ -63,7 +79,7 @@ int main() {
 	dArr = nullptr;
 	dArr = new int[n + 1];*/
 	
-	cout << "Задача1\nВведите длину массива: ";
+	/*cout << "Задача1\nВведите длину массива: ";
 	unsigned int size1;
 	cin >> size1;
 	int* z1 = new int[size1];
@@ -73,6 +89,19 @@ int main() {
 	z1 = addEl(z1, size1, 2);
 	cout << "Итоговый массив\n";
 	showArr(z1, size1);
+	delete[]z1;*/
+
+	cout << "Задача2\nВведите длину массива: ";
+	unsigned int size2;
+	cin >> size2;
+	int* z2 = new int[size2];
+	fillArr(z2, size2, 10, 52);
+	cout << "Изначальный массив: \n";
+	showArr(z2, size2);
+	z2 = delEl(z2, size2, 3);
+	cout << "Итоговый массив\n";
+	showArr(z2, size2);
+	
 
 
 	
@@ -80,3 +109,4 @@ int main() {
 	system("pause>nul");
 	return 0;
 }
+//Задача 2. Уменеьшение размера массива
